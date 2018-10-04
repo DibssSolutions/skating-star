@@ -1,0 +1,106 @@
+.inner
+	margin: 0 auto
+	padding: 0 15px
+	max-width: 1200px
+	+clr
+	// +sm
+	// 	padding: 0 30px
+	// +xs
+	// 	padding: 0 15px
+
+.row
+	margin: 0 -15px
+	display: flex
+	flex-wrap: wrap
+	
+.col
+	padding: 0 15px
+	&-16
+		flex: 0 0 16.6%
+		max-width: 16.6%
+	&-20
+		flex: 0 0 20%
+		max-width: 20%
+	&-25
+		flex: 0 0 25%
+		max-width: 25%
+	&-33
+		flex: 0 0 33.3%
+		max-width: 33.3%
+	&-40
+		flex: 0 0 40%
+		max-width: 40%
+	&-42
+		flex: 0 0 41.7%
+		max-width: 41.7%
+	&-50
+		flex: 0 0 50%
+		max-width: 50%
+	&-58
+		flex: 0 0 58.3%
+		max-width: 58.3%
+	&-60
+		flex: 0 0 60%
+		max-width: 60%
+	&-66
+		flex: 0 0 66.7%
+		max-width: 66.7% 
+	&-100
+		flex: 0 0 100%
+		max-width: 100%
+
+	&-md-16
+		+md
+			flex: 0 0 16.6%
+			max-width: 16.6%
+	&-md-25
+		+md
+			flex: 0 0 25%
+			max-width: 25%
+	&-md-33
+		+md
+			flex: 0 0 33.3%
+			max-width: 33.3%
+	&-md-40
+		+md
+			flex: 0 0 40%
+			max-width: 40%
+	&-md-50
+		+md
+			flex: 0 0 50%
+			max-width: 50%
+	&-md-60
+		+md
+			flex: 0 0 60%
+			max-width: 60%
+	&-md-100
+		+md
+			flex: 0 0 100%
+			max-width: 100%
+	
+	&-sm-33
+		+sm
+			flex: 0 0 33.3%
+			max-width: 33.3%
+	&-sm-50
+		+sm
+			flex: 0 0 50%
+			max-width: 50%
+	&-sm-100
+		+sm
+			flex: 0 0 100%
+			max-width: 100%
+	
+	&-xs-50
+		+xs
+			flex: 0 0 50%
+			max-width: 50%
+	&-xs-100
+		+xs
+			flex: 0 0 100%
+			max-width: 100%
+	&-right
+		margin-left: auto
+	&.sm-order2
+		+sm
+			order: 2

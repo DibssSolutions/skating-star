@@ -1,0 +1,70 @@
+.main
+	height: 100vh
+	min-height: 630px
+	background-color: rgba($color: #2b2e26, $alpha: 0.5)
+	.error
+		color: #fff
+	&__video
+		position: relative
+		height: 100%
+		width: 100%
+		&:before
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			content: ""
+			z-index: 1
+			background-color: rgba(#110d7f, 0.45) 
+	&__container
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: 4
+		color: #fff
+		padding: 85px 0
+		+vertical
+	&__content
+		display: inline-block
+		vertical-align: middle
+		padding: 150px 15px
+		max-width: 920px
+	&__footer
+		position: absolute
+		font-family: $roboto
+		font-size: 14px
+		width: 100%
+		bottom: 0
+		margin-bottom: 46px
+	&__footer-wrap
+		display: flex
+		justify-content: space-between
+	&__title
+		font-weight: 900
+		font-size: 50px
+		text-transform: uppercase
+	&__subtitle
+		display: inline-block
+		font-size: 17px
+		font-weight: 500
+		max-width: 820px
+		margin-top: 13px
+	&__form
+		max-width: 865px
+		margin: 0 auto
+		margin-top: 60px
+.benefits-item
+	display: flex
+	align-items: center
+	text-align: left
+	&__icon
+		font-size: 32px
+		color: #fff
+		margin-right: 16px
+		.icon
+			display: block
+	&__text
+		max-width: 170px
