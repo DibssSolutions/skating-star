@@ -1,0 +1,35 @@
+.about
+	padding-top: 70px
+	&__title
+		margin-bottom: 47px
+	&__content
+		padding: 38px 0 46px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+	&__text
+		padding: 50px 35px 30px
+		max-width: 680px
+		background-color: $white
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		+sm
+			padding: 20px
+	&__item
+		&:not(:last-child)
+			margin-bottom: 22px
+	&__topic
+		margin-bottom: 14px
+	&__list-item
+		position: relative
+		padding-left: 10px
+		&:before
+			content: ""
+			position: absolute
+			width: 5px
+			height: 5px
+			background-color: #363636
+			left: 0
+			top: 8px
+			border-radius: 50%

@@ -1,0 +1,67 @@
+.price
+	padding: 50px 0 40px
+	background-color: #f6f7fd
+	&__title
+		margin-bottom: 50px
+	&__list
+	&__note
+		color: #666696
+		font-size: 16px
+		margin-top: 36px
+		span
+			color: $pink
+	.col
+		&:not(:last-child)
+			+md
+				margin-bottom: 20px
+	
+.price-item
+	padding: 35px 43px 42px
+	text-align: center
+	box-shadow: 0 0 15px rgba(#b8b8b8,.48)
+	background-color: $white
+	+xs
+		padding: 15px
+	&:last-child
+		margin-bottom: 0
+	&__subtitle
+		position: relative
+		margin: 5px 0 25px
+		font-size: 14px
+		line-height: 1.57
+		min-height: 65px
+		&:after
+			content: ""
+			position: absolute
+			background-color: $pink
+			box-shadow: 0px 0px 22px 0px rgba(184, 184, 184, 0.48)
+			position: absolute
+			width: 234px
+			height: 3px
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+	&__cost
+		position: relative
+		margin-bottom: 32px
+	&__value
+		display: block
+		margin-top: 5px
+		font-size: 50px
+		font-weight: 500
+		line-height: 1.12
+	&__hint
+		position: absolute
+		left: 0
+		bottom: -24
+		width: 100%
+		text-align: center
+		font-size: 18px
+		font-weight: 500
+		+sm
+			font-size: 14px
+		span
+			color: $pink
+	&__time
+		font-size: 25px
+		margin-bottom: 25px

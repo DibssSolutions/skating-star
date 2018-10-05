@@ -3,17 +3,47 @@ body
 	font-family: $museo
 	+f(15px,300,1.73) 
 	line-height: 1.4
+	color: #363636
 
 .btn
 	font-weight: 700
 	text-transform: uppercase
+	text-decoration: none
+	font-family: $museo
+	font-size: 14px
 	text-align: center
 	line-height: 2.36
-	padding: 13px 39px
-	background-color: #db019d
-	color: #fff
+	padding: 12px 39px
+	background-color: $pink
+	color: $white
+	display: inline-block
+	+xs
+		padding: 12px 15px
+	&_wide
+		width: 100%
+		padding: 12px 0
+	&_big
+		padding: 12px 75px
 
-.btn_wide
-	width: 100%
-	padding: 13px 0
+.title
+	position: relative
+	font-size: 40px
+	font-weight: 900
+	line-height: 1
+	padding-bottom: 22px
+	&:after
+		content: ""
+		background-color: $pink
+		position: absolute
+		left: 5px
+		bottom: 0
+		width: 213px
+		height: 5px
+	&_sm
+		&:after
+			width: 102px
 
+.title-small
+	font-size: 18px
+	font-weight: 900
+	line-height: 1

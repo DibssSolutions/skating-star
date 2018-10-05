@@ -1,0 +1,37 @@
+<div class="price">
+	<div class="price__inner inner">
+		<h2 class="price__title title">Стоимость подкаток</h2>
+		<div class="price__list row">
+			{% for item in [
+					{
+						title: "Первое занятие",
+						subtitle: "(ознакомительная тренирвока, может быть проведена всего 1 раз для 1 человека)",
+						price: "0 P",
+						time: "30 мин."
+					},
+					{
+						title: "Одно занятие",
+						subtitle: "(Разовое занятие)",
+						price: "2500 P",
+						time: "60 мин."
+					},
+					{
+						title: "8 занятий в мес",
+						subtitle: "(оплачиваеться пакетом, 
+						вся сумма сразу за 8 тренировок).",
+						price: "15000",
+						hint: true,
+						time: "60 мин."
+					}
+				] %}
+				<div class="col col-33 col-md-50 col-sm-100">
+					{{ mixins.priceItem(item) }}
+				</div>
+			{% endfor %}
+		</div>
+		<div class="price__note">
+			<span>* </span>
+			Оплата выхода для ученика и тренера на лёд оплачваетсья отдельно.
+		</div>
+	</div>
+</div>

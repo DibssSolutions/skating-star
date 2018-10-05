@@ -12,3 +12,29 @@
 		</div>
 	</div>
 {% endmacro %}
+
+{% macro priceItem(props) %}
+	<div class="price-item">
+		<h5 class="price-item__title title-small">{{ props.title }}</h5>
+		<div class="price-item__subtitle">{{ props.subtitle }}</div>
+		<div class="price-item__cost">
+			Стоимость:
+			<span class="price-item__value">
+				{{ props.price }}
+			</span>
+			{% if props.hint %}
+				<div class="price-item__hint">
+					по <span>1850</span> Р - 1 тренировка
+				</div>
+			{% endif %}
+		</div>
+		<div class="price-item__time">
+			{{ props.time }}
+		</div>
+		<div class="price-item__btn">
+			<a href="#" class="btn btn_big">
+				записаться
+			</a>
+		</div>
+	</div>
+{% endmacro %}
