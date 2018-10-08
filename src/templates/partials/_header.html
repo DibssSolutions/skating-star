@@ -1,31 +1,58 @@
-<header class="header">
+<header class="header js-header">
 	<div class="header__inner inner">
-		<div class="header__logo">
+		<h1 class="header__logo">
 			skating.star
-		</div>
-		<div class="header__links">
-			<a href="tel:+79150844763" class="header__tel">
-				+7 (915) 084-47-63
-			</a>
-			<a href="http://instagram.com" class="header__inst">
-				{{ mixins.icon('instagram') }}
-			</a>
-		</div>
-		<nav class="header__nav nav">
-			<ul class="nav__list">
-				{% for item in [
-						'Для кого?',
-						'Видео с подкаток',
-						'Обо мне',
-						'Стоимость',
-						'Мои ученики',
-						'Контакты'
-					] %}
-					<li class="nav__item">
-						<a href="#" class="nav__link">{{ item }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</nav>
+		</h1>
+		<div class="header__wrap">
+			<nav class="header__nav nav">
+				<ul class="nav__list">
+					{% for item in [
+						{
+							text: 'Для кого?',
+							id: 'for-whom'
+						},
+						{
+							text: 'Видео с подкаток',
+							id: 'video'
+						},
+						{
+							text: 'Обо мне',
+							id: 'about'
+						},
+						{
+							text: 'Стоимость',
+							id: 'price'
+						},
+						{
+							text: 'Мои ученики',
+							id: 'students'
+						},
+						{
+							text: 'Контакты',
+							id: 'contacts'
+						}
+						] %}
+						<li class="nav__item">
+							<a href="#{{ item.id }}" class="nav__link js-menu-link">{{ item.text }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</nav>
+				<div class="header__links">
+					<a href="tel:+79150844763" class="header__tel">
+						+7 (915) 084-47-63
+					</a>
+					<a href="http://instagram.com" class="header__inst">
+						{{ mixins.icon('instagram') }}
+					</a>
+				</div>
+			</div>
+		<button type="button" class="toggle-mnu">
+			<span class="sandwich">
+				<span class="sw-topper"></span>
+				<span class="sw-bottom"><span class="sw-bottom__inner"></span></span>
+				<span class="sw-footer"></span>
+			</span>
+		</button>
 	</div>
 </header>

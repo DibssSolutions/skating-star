@@ -4,6 +4,13 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+
+	<div class="js-success message-sending">Ваш запрос принят, ожидайте. Наш менеджер с вами свяжется в течении 15 минут.
+		<button class="message-sending__x js-close">&#10006;</button>
+	</div>
+
+	<div class="js-error message-sending"></div>
+
 	{% include "partials/_header.html" %}
 	
 	{% include "partials/_main.html" %}

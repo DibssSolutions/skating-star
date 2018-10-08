@@ -1,19 +1,28 @@
 .price
 	padding: 50px 0 40px
 	background-color: #f6f7fd
+	+sm
+		padding: 25px 0
 	&__title
 		margin-bottom: 50px
+		+sm
+			margin-bottom: 25px
 	&__list
 	&__note
 		color: #666696
 		font-size: 16px
 		margin-top: 36px
+		+sm
+			font-size: 14px
+			margin-top: 15px
 		span
 			color: $pink
 	.col
 		&:not(:last-child)
 			+md
 				margin-bottom: 20px
+			+sm
+				margin-bottom: 15px
 	
 .price-item
 	padding: 35px 43px 42px
@@ -30,6 +39,10 @@
 		font-size: 14px
 		line-height: 1.57
 		min-height: 65px
+		+sm
+			margin-bottom: 15px
+			min-height: auto
+			padding-bottom: 8px
 		&:after
 			content: ""
 			position: absolute
@@ -44,12 +57,16 @@
 	&__cost
 		position: relative
 		margin-bottom: 32px
+		+sm
+			margin-bottom: 20px
 	&__value
 		display: block
 		margin-top: 5px
 		font-size: 50px
 		font-weight: 500
 		line-height: 1.12
+		+sm
+			font-size: 32px
 	&__hint
 		position: absolute
 		left: 0
@@ -65,3 +82,6 @@
 	&__time
 		font-size: 25px
 		margin-bottom: 25px
+		+sm
+			font-size: 18px
+			margin-bottom: 15px
