@@ -11,12 +11,29 @@
 	transition: background-color .3s
 	+md
 		padding: 9px 0 3px
+	&.is-fixed 
+		background-color: $white
+		color: #363636
+		position: fixed
+		box-shadow: 0 0 15px rgba(#b8b8b8,.48)
+		border: none
+		.nav__link
+			color: #363636
+			&.is-active
+				color: $pink
+		a
+			color: #363636
+	&.is-open-menu
+		+md
+			color: #363636
 	a
 		color: $white
 		text-decoration: none
 		+md
 			color: #363636
 	&__logo
+		position: relative
+		z-index: 6
 		font-family: $bearpaw
 		font-size: 42px
 		float: left
@@ -30,19 +47,19 @@
 			width: 100%
 			height: 100%
 			position: fixed
-			top: 54px
+			top: 0
 			left: 0
 			display: flex
 			flex-direction: column
 			align-items: center
 			justify-content: flex-start
-			padding: 30px
+			padding: 84px 30px 30px
 			background-color: $white
 			margin-left: -100%
 			transition: transform .5s
 			z-index: 5
 			color: #363636
-			&.is-active
+			.is-open-menu &
 				transform: translateX(100%)
 	&__nav
 		// float: right
@@ -70,6 +87,7 @@
 		display: block
 		position: relative
 		margin-left: 30px
+		margin-top: -2px
 		line-height: 1
 		+lg
 			margin-left: 15px
@@ -83,16 +101,6 @@
 			top: 50%
 			left: 50%
 			transform: translate(-50%,-50%)
-	&.is-fixed
-		background-color: $white
-		color: #363636
-		position: fixed
-		box-shadow: 0 0 15px rgba(#b8b8b8,.48)
-		border: none
-		.nav__link
-			color: #363636
-			&.is-active
-				color: $pink
 
 .nav
 	&__list
@@ -113,7 +121,7 @@
 			color: $pink
 
 /*Sandwich*/
-.toggle-mnu
+.toggle-menu
 	position: relative
 	float: right
 	width: 32px
@@ -160,7 +168,8 @@ $h: 3px
 	margin-bottom: 5px
 	+xs
 		margin-bottom: 4px
-	.header.is-fixed &
+	.header.is-fixed &,
+	.header.is-open-menu &
 		background: #363636
 .sw-bottom
 	overflow: hidden
@@ -176,7 +185,8 @@ $h: 3px
 		border: none
 		transition: transform 0.3s ease-in-out, opacity .5s ease-in-out
 		margin-bottom: 5px
-		.header.is-fixed &
+		.header.is-fixed &,
+		.header.is-open-menu &
 			background: #363636
 		+xs
 			margin-bottom: 4px
@@ -190,7 +200,8 @@ $h: 3px
 	background: $white
 	border: none
 	transition: transform 0.5s
-	.header.is-fixed &
+	.header.is-fixed &,
+	.header.is-open-menu &
 		background: #363636
 
 .sandwich.is-active
