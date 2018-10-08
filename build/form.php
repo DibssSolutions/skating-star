@@ -1,6 +1,6 @@
 <?php
 	/* Email address which will get the message */
-	$to = "myratov.r@gmail.com";
+	$to = "skating-star@yandex.ru";
 	/* subject (message theme) */
 	$subject = 'Новый запрос на расчет банкета';
 	/* form fields (getting by attr name) */

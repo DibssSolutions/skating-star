@@ -6,6 +6,8 @@ body
 	color: #363636
 
 .btn
+	position: relative
+	overflow: hidden
 	font-weight: 700
 	text-transform: uppercase
 	text-decoration: none
@@ -17,6 +19,26 @@ body
 	background-color: $pink
 	color: $white
 	display: inline-block
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background-color: rgba(255,255,255,0.25)
+		transition: all 0.3s
+		transform-origin: left bottom
+		transform: translateY(-100%) rotate(-30deg)
+		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1)
+	&:after
+		transition-delay: 0.2s
+	&:hover
+		&:before,
+		&:after
+			transform: translate(0,0)
 	+xs
 		padding: 4px 15px
 	&_wide
@@ -24,6 +46,10 @@ body
 		padding: 12px 0
 	&_big
 		padding: 12px 75px
+	&__text
+		position: relative
+		z-index: 1
+		display: block
 
 .title
 	position: relative
