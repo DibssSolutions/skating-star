@@ -10,3 +10,4 @@ import './components/_menuActive';
 import './components/_mask';
 import './components/_form-validation';
 import './components/_form-submit';
+import './components/_slider';
