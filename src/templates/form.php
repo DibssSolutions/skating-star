@@ -2,7 +2,7 @@
 	/* Email address which will get the message */
 	$to = "skating-star@yandex.ru";
 	/* subject (message theme) */
-	$subject = 'Новый запрос на расчет банкета';
+	$subject = 'Запись на подкатки';
 	/* form fields (getting by attr name) */
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
