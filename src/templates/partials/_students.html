@@ -1,7 +1,7 @@
 <div class="students">
 	<div class="students__inner inner">
 		<div class="students__title title">Мои ученики</div>
-		<div class="students__list row">
+		<div class="students__list slider js-slider">
 			{% for item in [
 					{
 						title: "Иванов Александр",
@@ -25,7 +25,7 @@
 						в 2010, 2011, 2013 г."
 					}
 				] %}
-				<div class="col col-33 col-md-50 col-sm-100">
+				<div class="students__slide slider__slide">
 					<div class="students__item students-item">
 						<div class="students-item__title title-small">{{ item.title }}</div>
 						<div class="students-item__subtitle">{{ item.subtitle }}</div>

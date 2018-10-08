@@ -1,0 +1,33 @@
+.slider
+	margin: 0 -15px
+	+md
+		margin: 0 -7px
+	&__slide
+		padding: 0 15px
+		+md
+			padding: 0 7px
+	.slick-dots
+		text-align: center
+		li
+			vertical-align: top
+			display: inline-block
+			&:not(:first-child)
+				margin-left: 15px
+			&.slick-active
+				button
+					background-color: #db019d 
+		button
+			position: relative
+			font-size: 0
+			width: 10px
+			height: 10px
+			background-color: lighten(#db019d, 30%)
+			border-radius: 50% 
+			transition: background-color .3s
+			&:before
+				position: absolute
+				content: "" 
+				top: -10px
+				right: -10px
+				bottom: -10px
+				left: -10px
