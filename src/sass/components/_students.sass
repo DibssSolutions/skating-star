@@ -16,6 +16,9 @@
 	text-align: center
 	font-size: 14px
 	line-height: 2.357
+	&:hover
+		.students-item__img:before
+			+scale(1.06)
 	+xs
 		padding: 20px 15px
 	&__title
@@ -23,6 +26,7 @@
 	&__subtitle
 		margin-bottom: 15px
 	&__img
+		position: relative
 		width: 166px
 		height: 166px
 		border-radius: 50%
@@ -31,8 +35,18 @@
 		background-size: cover
 		display: inline-block
 		vertical-align: top
-		border: 1px solid $white
-		box-shadow: 0 0 22px rgba(#b8b8b8,.48)
 		margin-bottom: 35px
+		&:before
+			position: absolute
+			content: ""
+			top: 0
+			left: 0
+			z-index: -1
+			width: 166px
+			height: 166px
+			border-radius: 50%
+			border: 1px solid $white
+			transition: transform .2s ease-in-out
+			box-shadow: 0 0 22px rgba(#b8b8b8,.48) 
 		+sm
 			margin-bottom: 15px
