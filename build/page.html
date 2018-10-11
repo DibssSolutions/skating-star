@@ -15,9 +15,19 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <div class="js-success message-sending">Ваш запрос принят, ожидайте. Наш менеджер с вами свяжется в течении 15 минут. <button class="message-sending__x js-close">&#10006;</button>
+      <div class="js-success message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner"> Спасибо, что отсавлили завку, в ближайшее время я вам обязательно перезвоню! </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
       </div>
-      <div class="js-error message-sending"></div>
+      <div class="js-error message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner js-error-block">
+          </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
+      </div>
       <header class="header js-header">
         <div class="header__inner inner">
           <h1 class="header__logo"> skating.star </h1>
@@ -197,7 +207,7 @@
                   <li class="about__list-item">Более 50 моих бывших и нынешних учеников играют в ведущих спортивных школах.</li>
                 </ul>
               </div>
-              <a href="#" class="btn">
+              <a href="#" class="btn" data-modal-control="modal-form">
                 <span class="btn__text">записаться на подкатки</span>
               </a>
             </div>
@@ -216,7 +226,7 @@
                 </div>
                 <div class="price-item__time"> 30 мин. </div>
                 <div class="price-item__btn">
-                  <a href="#" class="btn btn_big">
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">
                     <span class="btn__text">записаться</span>
                   </a>
                 </div>
@@ -230,7 +240,7 @@
                 </div>
                 <div class="price-item__time"> 60 мин. </div>
                 <div class="price-item__btn">
-                  <a href="#" class="btn btn_big">
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">
                     <span class="btn__text">записаться</span>
                   </a>
                 </div>
@@ -245,7 +255,7 @@
                 </div>
                 <div class="price-item__time"> 60 мин. </div>
                 <div class="price-item__btn">
-                  <a href="#" class="btn btn_big">
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">
                     <span class="btn__text">записаться</span>
                   </a>
                 </div>
@@ -313,10 +323,56 @@
         </div>
       </div>
       <footer class="footer">
+        <div class="footer__up">
+          <div class="footer__container container">
+            <button class="btn-up js-btn-up" type="button">
+              <svg width="59" height="59" viewBox="0 0 59 59" xmlns="http://www.w3.org/2000/svg">
+                <title>up</title>
+                <g stroke="#ffffff" fill="none" fill-rule="evenodd">
+                  <path d="M1.5 29.13c0 15.26 12.37 27.63 27.63 27.63s27.63-12.37 27.63-27.63S44.39 1.5 29.13 1.5 1.5 13.87 1.5 29.13z" stroke-width="3" fill="rgba(17, 13, 127, 0.45)" fill-rule="nonzero" opacity="1" />
+                  <g stroke-linecap="round" stroke-width="4">
+                    <path d="M18.5 32.5l11-10" />
+                    <path d="M29.5 22.5l11 11" />
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
         <div class="footer__inner inner">
           <div class="footer__ad">Разработка и продвижение сайта - <a href="http://blacksmithstudio.ru/" target="_blank">BlacksmithStudio.ru</a></div>
         </div>
       </footer>
+      <div class="modal" data-modal="modal-form">
+        <div class="modal__container modal-form__container" data-modal-container>
+          <div class="modal__inner modal-form__inner">
+            <button class="modal__close modal-form__close" data-modal-close>
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <h3 class="modal-form__title title-modal">Записаться на подкатки</h3>
+            <form action="form.php" class="form form-modal js-form" method="POST">
+              <div class="form__input-group form-modal__input-group"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
+              <div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон"></div>
+              <div class="form-modal__submit">
+                <button class="btn btn_modal js-btn-submit" type="submit">
+                  <span class="btn__text">отправить</span>
+                </button>
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" checked name="1">
+                <span class="checkbox__text">Я согласен с условиями обработки персональных данных</span>
+                <span class="checkbox__icon">
+                  <svg class="icon icon-check">
+                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

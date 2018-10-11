@@ -5,11 +5,23 @@ title: Index page
 
 {% block content %}
 
-	<div class="js-success message-sending">Ваш запрос принят, ожидайте. Наш менеджер с вами свяжется в течении 15 минут.
-		<button class="message-sending__x js-close">&#10006;</button>
+	<div class="js-success message-sending">
+		<div class="message-sending__container">
+			<div class="message-sending__inner">
+				Спасибо, что отсавлили завку, в ближайшее время я вам обязательно перезвоню!
+			</div>
+			<button class="message-sending__x js-close">&#10006;</button>
+		</div>
 	</div>
 
-	<div class="js-error message-sending"></div>
+	<div class="js-error message-sending">
+		<div class="message-sending__container">
+			<div class="message-sending__inner js-error-block">
+				
+			</div>
+			<button class="message-sending__x js-close">&#10006;</button>
+		</div>
+	</div>
 
 	{% include "partials/_header.html" %}
 	

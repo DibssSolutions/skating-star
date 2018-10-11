@@ -8,26 +8,32 @@ $.validator.setDefaults({
 });
 
 var form = $('.js-form');
+var modal = $('[data-modal]');
 
-form.validate({
-  rules: {
-    'name': {
-      required: true
-    },
-    'phone': {
-      required: true
+form.each((i, el) => {
+  $(el).validate({
+    rules: {
+      'name': {
+        required: true
+      },
+      'phone': {
+        required: true
+      }
     }
-  }
+  });
 });
 
 var formSubmit = $('.js-btn-submit');
 
 formSubmit.each((i, submit) => {
   $(submit).on('click', function(e) {
-    var form = $(submit).closest('.js-form');
+    var form = $(submit).parents('.js-form');
     form.valid();
     if (!form.valid()) {
       e.preventDefault();
+    }
+    else {
+      modal.removeClass('is-open');
     }
   });
 });

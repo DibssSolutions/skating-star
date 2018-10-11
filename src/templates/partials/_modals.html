@@ -1,0 +1,31 @@
+
+
+<div class="modal" data-modal="modal-form">
+	<div class="modal__container modal-form__container" data-modal-container>
+		<div class="modal__inner modal-form__inner">
+			<button class="modal__close modal-form__close" data-modal-close>
+				{{mixins.icon('close')}}
+			</button>
+			<h3 class="modal-form__title title-modal">Записаться на подкатки</h3>
+			<form action="form.php" class="form form-modal js-form" method="POST">
+						<div class="form__input-group form-modal__input-group"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
+						<div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон"></div>
+						<div class="form-modal__submit">
+							<button class="btn btn_modal js-btn-submit" type="submit">
+								<span class="btn__text">отправить</span>
+							</button>
+						</div>
+						<label class="checkbox">
+							<input type="checkbox" checked name="1">
+							<span class="checkbox__text">Я согласен с условиями обработки персональных данных</span>
+							<span class="checkbox__icon">
+								<svg class="icon icon-check">
+								<use xlink:href="img/sprite.svg#icon-check"></use>
+								</svg>
+							</span>
+						</label>
+			</form>
+		</div>
+	</div>
+</div>
+

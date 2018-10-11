@@ -1,3 +1,4 @@
+import {BODY} from './../constants';
 $(document).ready(function() {
   $('.js-form').on('submit', e => {
     e.preventDefault();
@@ -15,29 +16,30 @@ $(document).ready(function() {
       success() {
         form.get(0).reset();
         var sentMessage = $('.js-success');
-        sentMessage.fadeIn(1000);
+        sentMessage.fadeIn(300);
       },
       error: function(jqXHR, ajaxSettings, thrownError) {
         var errorSent = $('.js-error');
+        var errorBlock = errorSent.find('.js-error-block');
         form.get(0).reset();
-        errorSent.fadeIn(1000);
-        var closeBtn =
-            '<button class="message-sending__x js-close">&#10006;</button>';
+        errorSent.fadeIn(300);
+        // var closeBtn =
+        //     '<button class="message-sending__x js-close">&#10006;</button>';
   
         if (jqXHR.status === 0) {
-          errorSent.html('Not connect.\n Verify Network.' + closeBtn);
+          errorBlock.html('Not connect.\n Verify Network.');
         } else if (jqXHR.status === 404) {
-          errorSent.html('Requested page not found. 404' + closeBtn);
+          errorBlock.html('Requested page not found. 404');
         } else if (jqXHR.status === 500) {
-          errorSent.html('Internal Server Error 500.' + closeBtn);
+          errorBlock.html('Internal Server Error 500.');
         } else if (exception === 'parsererror') {
-          errorSent.html('Requested JSON parse failed.' + closeBtn);
+          errorBlock.html('Requested JSON parse failed.');
         } else if (exception === 'timeout') {
-          errorSent.html('Превышено время отправки сообщения' + closeBtn);
+          errorBlock.html('Превышено время отправки сообщения');
         } else if (exception === 'abort') {
-          errorSent.html('Ajax request aborted.' + closeBtn);
+          errorBlock.html('Ajax request aborted.');
         } else {
-          errorSent.html('Uncaught Error.\n' + jqXHR.responseText + closeBtn);
+          errorBlock.html('Uncaught Error.\n' + jqXHR.responseText);
         }
       }
     });
@@ -45,11 +47,21 @@ $(document).ready(function() {
   
   $('.message-sending').on('click', function(e) {
     var target = event.target;
-  
+    // if(!$(target).parents().hasClass('js-success') || !$(target).parents().hasClass('js-error')) {
+    //   $(target)
+    //     .parents('.message-sending')
+    //     .fadeOut(500);
+    // }
     if ($(target).hasClass('js-close')) {
       $(target)
         .parents('.message-sending')
-        .fadeOut(500);
+        .fadeOut(300);
     }
   });
 });
+BODY.on('click', e => {
+  if (!$(e.target).closest('.message-sending__inner').length ) {
+    $('.message-sending').fadeOut(300);
+  };
+});
+

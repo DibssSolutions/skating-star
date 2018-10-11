@@ -5,6 +5,7 @@ body
 	line-height: 1.4
 	color: #363636
 	min-width: 320px
+	position: relative
 
 .btn
 	position: relative
@@ -30,6 +31,8 @@ body
 		padding: 12px 10px
 	&_big
 		padding: 12px 75px
+	&_modal
+		padding: 12px 50px
 	&__text
 		position: relative
 		z-index: 1
@@ -74,31 +77,44 @@ body
 	+sm
 		font-size: 16px
 
+.title-modal
+	font-size: 27px
+	font-weight: 700
+	text-align: center
+
 .message-sending
 	display: none
 	position: fixed
-	top: 20px
-	right: 20px
-	left: 20px
-	padding: 32px 40px
-	z-index: 2000
-	background-color: #fff
-	color: #090909
-	box-shadow: 0 0 5px 0 rgba(0,0,0,.1)
-	font-size: 24px
-	border-radius: 5px
-	border: 2px solid #090909
-	+sm
-		font-size: 18px
-		padding: 24px 32px 24px 24px
-		top: 15px
-		right: 15px
-		left: 15px
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(#363636,.7)
+	user-select: none
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	&__container
+		position: relative
+		z-index: 1
+		font-size: 27px
+		font-weight: 700
+		vertical-align: middle
+		display: inline-block
+		max-width: 430px
+		width: 100%
+		padding: 0 15px
+	&__inner
+		padding: 60px 40px 35px
+		max-width: 100%
+		background-color: $white
+		+xs
+			padding: 45px 15px
 	&__x
 		position: absolute
-		top: 4px
-		right: 10px
-		display: inline-block
-		font-size: 24px
-		color: red
-		background: none
+		top: 20px
+		right: 40px
+		background-color: transparent
+		font-size: 17px

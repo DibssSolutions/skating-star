@@ -1,0 +1,110 @@
+[data-modal]
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	background-color: rgba(#363636,.7)
+	user-select: none
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+		
+[data-modal-container]
+	position: relative
+	z-index: 1
+	font-size: 12px
+	// font-family: $yanone
+	// font-weight: 300
+	vertical-align: middle
+	display: inline-block
+	max-width: 430px
+	width: 100%
+	padding: 0 15px
+[data-modal-close]
+	position: absolute
+	top: 20px
+	right: 40px
+	background-color: transparent
+	font-size: 0
+	.icon
+		font-size: 17px
+
+.modal
+	&__inner
+		padding: 60px 40px 35px
+		max-width: 100%
+		background-color: $white
+		+xs
+			padding: 45px 15px
+
+.modal-form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: center
+	margin-top: 40px
+	color: #929292
+	+xs
+		margin-top: 20px
+	&.novalidate
+		.modal-error
+			display: flex
+.form-modal
+	max-width: 275px
+	margin: 35px auto 0
+	&__input-group
+		&:not(:last-child)
+			margin-bottom: 14px
+	&__submit
+		margin-top: 33px
+		text-align: left
+
+.checkbox
+	position: relative
+	padding-left: 40px
+	text-align: left
+	+f(13px,300,1.53)
+	color: #363636
+	cursor: pointer
+	user-select: none
+	display: block
+	margin-top: 20px
+	input
+		position: absolute
+		left: 0
+		top: -1px
+		opacity: 0
+		width: 16px
+		height: 16px
+		&:checked ~ .checkbox__icon
+			opacity: 1
+	&__text
+		&:before
+			position: absolute
+			content: ""
+			top: 50%
+			transform: translateY(-50%)
+			left: 0
+			width: 22px
+			height: 22px
+			background-color: #363636
+	&__icon
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 5px
+		font-size: 0
+		opacity: 0
+		transition: opacity .3s
+		.icon
+			font-size: 10px 
+			color: $white
