@@ -31,11 +31,15 @@
 		transform: translateX(100%)
 		opacity: .3
 		transition: transform .6s ease-in-out, opacity .6s ease-in-out
-		+sm
+		+md
 			position: sticky
+			margin-top: 20px
+			+clr
 		img
 			display: block
 			max-width: 100%
+			+md
+				float: right
 		&.is-animate
 			transform: translateX(0%)
 			opacity: 1
