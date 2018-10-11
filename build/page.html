@@ -73,7 +73,7 @@
         </div>
       </header>
       <div class="main js-navigation-section">
-        <div class="main__video js-video" data-vide-bg="mp4: video/3, poster: video/poster" data-vide-options="posterType: jpg, loop: true, playsinline: true"></div>
+        <div class="main__video js-video" data-vide-bg="mp4: video/3" data-vide-options="posterType: jpg, loop: true, playsinline: true"></div>
         <div class="main__container">
           <div class="main__content">
             <div class="main__inner inner">
@@ -86,7 +86,7 @@
                       <div class="form__input-group"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
                     </div>
                     <div class="col col-33 col-sm-100">
-                      <div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон"></div>
+                      <div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон" minlength="16"></div>
                     </div>
                     <div class="col col-33 col-sm-100">
                       <button class="btn btn_wide js-btn-submit" type="submit">
@@ -354,7 +354,7 @@
             <h3 class="modal-form__title title-modal">Записаться на подкатки</h3>
             <form action="form.php" class="form form-modal js-form" method="POST">
               <div class="form__input-group form-modal__input-group"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
-              <div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон"></div>
+              <div class="form__input-group"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон" minlength="16"></div>
               <div class="form-modal__submit">
                 <button class="btn btn_modal js-btn-submit" type="submit">
                   <span class="btn__text">отправить</span>
