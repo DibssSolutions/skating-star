@@ -27,12 +27,26 @@
 				margin-bottom: 15px
 	
 .price-item
+	position: relative
+	z-index: 1
 	padding: 35px 43px 42px
 	text-align: center
-	box-shadow: 0 0 15px rgba(#b8b8b8,.48)
-	background-color: $white
+	&:hover
+		&:before
+			+scale(1.03)
 	+xs
 		padding: 15px
+	&:before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+		transition: transform .2s ease-in-out
+		box-shadow: 0 0 15px rgba(#b8b8b8,.48)
+		background-color: $white 
 	&:last-child
 		margin-bottom: 0
 	&__subtitle
