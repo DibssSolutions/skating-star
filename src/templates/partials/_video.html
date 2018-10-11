@@ -3,9 +3,9 @@
 		<h2 class="video__title title">Видео с подкаток</h2>
 		<div class="video__list">
 			<div class="slider js-slider">
-				{% for item in [1,2,3] %}
+				{% for link in ["https://www.youtube.com/embed/I-CaIuwVs0g","https://www.youtube.com/embed/vUJrne6enL8","https://www.youtube.com/embed/vUJrne6enL8"] %}
 					<div class="slider__slide">
-							<iframe width="100%" height="367px" src="https://www.youtube.com/embed/muBJidUFVAI?controls=0&iv_load_policy=3" controls="0" frameborder="0" allow="autoplay" allowfullscreen ></iframe>
+							<iframe width="100%" height="370px" src="{{link}}?showinfo=0" controls="0" frameborder="0" allow="autoplay" allowfullscreen ></iframe>
 					</div>
 				{% endfor %}
 			</div>
