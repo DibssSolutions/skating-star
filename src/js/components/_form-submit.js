@@ -45,23 +45,18 @@ $(document).ready(function() {
     });
   });
   
-  $('.message-sending').on('click', function(e) {
+  $('.js-message-sending').on('click', function(e) {
     var target = event.target;
-    // if(!$(target).parents().hasClass('js-success') || !$(target).parents().hasClass('js-error')) {
-    //   $(target)
-    //     .parents('.message-sending')
-    //     .fadeOut(500);
-    // }
     if ($(target).hasClass('js-close')) {
       $(target)
-        .parents('.message-sending')
+        .parents('.js-message-sending')
         .fadeOut(300);
     }
   });
 });
 BODY.on('click', e => {
-  if (!$(e.target).closest('.message-sending__inner').length ) {
-    $('.message-sending').fadeOut(300);
+  if (!$(e.target).closest('.js-message-sending-inner').length ) {
+    $('.js-message-sending').fadeOut(300);
   };
 });
 
